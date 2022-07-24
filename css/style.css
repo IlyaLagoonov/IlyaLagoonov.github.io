@@ -1,0 +1,181 @@
+html {
+    box-sizing: border-box
+}
+
+html,
+body {
+    font-family: 'Gilroy', 'sans-serif';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0em;
+}
+
+* {
+    box-sizing: inherit
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-Medium'),
+        url('/fonts/GilroyBold.woff2') format('woff2'),
+        url('/fonts/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-Bold'),
+        url('/fonts/GilroyBold.woff2') format('woff2'),
+        url('/fonts/Gilroy-Bold.woff') format('woff');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-reset {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header__container {
+    padding-top: 1px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #828282;
+}
+
+.header__list {
+    justify-content: space-between;
+}
+
+.header__link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #070707;
+    text-decoration: none;
+}
+
+.info {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info__heading {
+    max-width: 50px;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 59px;
+    color: #070707;
+}
+
+.info__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__section {
+    padding-bottom: 100px;
+}
+
+.hero__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__pic {
+    width: 845px;
+    height: 346px;
+}
+
+.about {
+    background-color: #F6F6F6;
+}
+
+.about__dscr {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0 107px;
+}
+
+.skills__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 20px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills__item {
+    max-width: 109px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.portfolio__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.portfolio__link {
+    color: #070707;
+}
+
+.portfolio__section {
+    background-color: #F6F6F6;
+}
+
+.portfolio__dscr {
+    text-align: center;
+}
+
+.portfolio__pic {
+    max-width: 750px;
+}
+
+.footer__link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer__link:not(:last-child) {
+    margin-right: 45px;
+}
+
+.tel__link {
+    color: #070707;
+}
+
+.tel__pic {
+    width: 111px;
+    height: 112px px;
+}
+
+.mobile__display {
+    display: none;
+}
