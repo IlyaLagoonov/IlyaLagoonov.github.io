@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     line-height: 32px;
     letter-spacing: 0em;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -35,6 +36,13 @@ body {
     font-style: normal;
 }
 
+
+:root {
+    --gray: #828282;
+    --cod-gray: #070707;
+    --wild-sand: #F6F6F6;
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +63,7 @@ body {
 .header__container {
     padding-top: 1px;
     padding-bottom: 7px;
-    border-bottom: 1px solid #828282;
+    border-bottom: 1px solid var(--gray);
 }
 
 .header__list {
@@ -66,8 +74,17 @@ body {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    color: #070707;
+    color: var(--cod-gray);
     text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.header__link:hover {
+    background-size: 100% 2px;
 }
 
 .info {
@@ -80,7 +97,7 @@ body {
     font-weight: 700;
     font-size: 47px;
     line-height: 59px;
-    color: #070707;
+    color: var(--cod-gray);
 }
 
 .info__description {
@@ -99,16 +116,37 @@ body {
 }
 
 .header__pic {
+    border-radius: 20px;
     width: 845px;
-    height: 346px;
+    height: 360px;
 }
 
 .about {
-    background-color: #F6F6F6;
+    background-color: var(--wild-sand);
+}
+
+.about__heading {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.about__heading.__active {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 
 .about__dscr {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
     text-align: center;
+}
+
+.about__dscr.__active {
+    transform: translate(0px, 0px);
+    transition: all 0.9s ease 0.4s;
+    opacity: 1;
 }
 
 .content {
@@ -132,6 +170,16 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    transform: translate(0px, 100%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+}
+
+
+.skills__item.__active {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 
 
@@ -142,11 +190,11 @@ body {
 }
 
 .portfolio__link {
-    color: #070707;
+    color: var(--cod-gray);
 }
 
 .portfolio__section {
-    background-color: #F6F6F6;
+    background-color: var(--wild-sand);
 }
 
 .portfolio__dscr {
@@ -168,7 +216,7 @@ body {
 }
 
 .tel__link {
-    color: #070707;
+    color: var(--cod-gray);
 }
 
 .tel__pic {
