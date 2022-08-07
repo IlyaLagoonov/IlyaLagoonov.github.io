@@ -46,8 +46,19 @@
         margin-right: 36px;
     }
 
+    .skills__list {
+        gap: 0px 12px;
+    }
+
     .mobile__display {
         display: block;
+    }
+
+    .tools__list {
+        display: grid;
+        gap: 0px 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 177px);
     }
 }
 
